@@ -12,7 +12,7 @@ const Projects = () => {
     {
       id: 2,
       title: "Crop Detection and Identification",
-      desc: "A brief description of Project and expertly configured and trained a YOLOv8-based model to achieve precise detection and classification of diverse crop types.",
+      desc: "Expertly configured and trained a YOLOv8-based model to achieve precise detection and classification of diverse crop types.",
       img: "public/crop.png",
       github: "https://github.com/Akshita149sachdeva/crop_detect",
     },

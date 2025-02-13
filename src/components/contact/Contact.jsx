@@ -30,20 +30,21 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_w1qfnr9",
-        "template_gw85sar",
-        formRef.current,
-        "KCQdaoNokzlzxIoTI"
-      )
-      .then(
-        (result) => {
-          setSuccess(true)
-        },
-        (error) => {
-          setError(true);
-        }
-      );
+  .sendForm(
+    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    formRef.current,
+    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+  )
+  .then(
+    (result) => {
+      setSuccess(true);
+    },
+    (error) => {
+      setError(true);
+    }
+  );
+
   };
 
   return (
