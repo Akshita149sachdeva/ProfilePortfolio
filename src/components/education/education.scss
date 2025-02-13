@@ -1,0 +1,171 @@
+@import "../../app.scss";
+
+.services {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mobile {
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: gray;
+      text-align: right;
+
+      @include mobile {
+        font-size: 12px; /* Very small font size */
+      }
+    }
+
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+
+      @include mobile {
+        width: 80%; /* Adjusted for mobile */
+      }
+    }
+  }
+
+  .titleContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px; /* Smaller gap */
+      }
+
+      img {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+
+        @include mobile {
+          width: 100px; /* Smaller image */
+          height: 30px; /* Smaller image */
+        }
+      }
+
+      h1 {
+        font-size: 96px;
+        font-weight: 100;
+
+        @include mobile {
+          font-size: 20px; /* Very small font size */
+        }
+      }
+
+      button {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: orange;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+
+        @include mobile {
+          font-size: 12px; /* Very small font size */
+          width: 100px; /* Smaller button */
+          height: 30px; /* Smaller button */
+        }
+      }
+    }
+  }
+
+  .listContainer {
+    flex: 2;
+    display: flex;
+    max-width: 1366px;
+    margin: auto;
+    gap: 20px; /* Add gap between boxes */
+
+    @include mobile {
+      flex-direction: column; /* Stack boxes vertically on mobile */
+      width: 100%;
+      padding: 0 10px; /* Smaller padding */
+    }
+
+    .box {
+      flex: 1; /* Ensure all boxes take equal space */
+      padding: 20px; /* Adjust padding for consistency */
+      border: 0.5px solid gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 300px; /* Set a minimum height for all boxes */
+
+      @include mobile {
+        min-height: auto; /* Remove fixed height on mobile */
+        padding: 10px; /* Smaller padding */
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 10px; /* Smaller margin */
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+
+        @include mobile {
+          font-size: 14px; /* Very small font size */
+        }
+      }
+
+      p {
+        font-size: 16px;
+        color: #ccc;
+        margin-bottom: 10px;
+
+        @include mobile {
+          font-size: 6px; /* Very small font size */
+        }
+      }
+
+      button {
+        padding: 10px;
+        background-color: orange;
+        border: none;
+        cursor: pointer;
+
+        @include mobile {
+          background-color: transparent;
+          border: 1px solid orange;
+          border-radius: 5px;
+          color: orange;
+          width: 100%; /* Full width on mobile */
+          padding: 3px; /* Smaller padding */
+          font-size: 5px; /* Very small font size */
+        }
+      }
+    }
+  }
+}
